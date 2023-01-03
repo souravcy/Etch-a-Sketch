@@ -12,25 +12,26 @@
 
 .box {
   background-color: rgb(22, 68, 53);
-  width: 370px;
-  flex: 1;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  display:flex;
+  flex-flow:wrap;
+  flex: none;
   border: 10px solid salmon;
   border-radius: 15px;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px;
+  
 }
-
-.smallbox{
-    background-color: blue;
-    height: 5px;;
-    width: 5px;
-    flex: none;
-    display: flex;
-    border: 1px solid black;
+.bigbox{
+  width: 400px;
+  height: 400px;
+  display:flex;
+  flex-flow:wrap;
+  flex: none;
+}
+.smallbox {
+  
+  background-color: rgb(17, 17, 107);
+  border: 1px solid black;
 }
 
 .smallbox:hover{
