@@ -2,15 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7015ad0c1e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <div class="header">Etch-a-Sketch</div>
     <div class="body">
-      <div button onclick="change()">Change Grid Size</div> 
+      <div class="buttons">
+        <div class="change" button onclick="changebutton()">
+          Change
+        </div>
+        <div class="clear" button onclick="changegrid()">Clear</div>
+      </div>
       <!-- <div class="bigbox"> -->
-        <div class="box"></div>
+      <div class="box"></div>
       <!-- </div> -->
     </div>
   </body>

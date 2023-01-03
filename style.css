@@ -1,42 +1,70 @@
+*{
+  background-color: rgb(127, 191, 255);
+}
+.header{
+  color: black;
+  font-size: 70px;
+  font-family:'Fuzzy Bubbles', cursive;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
 .body {
-    position: absolute;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(127, 191, 255);
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  justify-content:space-around;
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 15px;
+  height: 30px;
+  width: 400px;
+  margin: 25px;
+  gap: 25px;
+}
+.change,.clear {
+  background-color: rgb(255, 158, 147);
+  border-radius: 10px;
+  width: 100px;
+  display: flex;
+  border: 1px solid black;
   justify-content: center;
   align-items: center;
 }
 
+
 .box {
-  background-color: rgb(22, 68, 53);
+  background-color: rgb(217, 163, 163);
   width: 400px;
   height: 400px;
-  display:flex;
-  flex-flow:wrap;
+  display: flex;
+  flex-flow: wrap;
   flex: none;
-  border: 10px solid salmon;
-  border-radius: 15px;
-  
+  border: 10px solid rgb(255, 135, 121);
 }
-.bigbox{
+.bigbox {
   width: 400px;
   height: 400px;
-  display:flex;
-  flex-flow:wrap;
+  display: flex;
+  flex-flow: wrap;
   flex: none;
 }
 .smallbox {
-  
-  background-color: rgb(17, 17, 107);
+  background-color: rgb(125, 125, 211);
   border: 1px solid black;
 }
 
-.smallbox:hover{
+.smallbox:hover {
   background-color: blueviolet;
 }
-.color{
+.color {
   background-color: rgb(98, 84, 110);
 }

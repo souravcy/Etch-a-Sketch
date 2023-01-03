@@ -1,14 +1,16 @@
 function create(gridsize) {
-    let box = document.querySelector(".box");
-    const bigbox = document.createElement("div");
-    bigbox.className = "bigbox";
-    box.appendChild(bigbox);
-    for (let i = 0; i < gridsize*gridsize; i++) {
-      const smallbox = document.createElement("div");
-      smallbox.className = "smallbox";
-      bigbox.appendChild(smallbox);
-      smallbox.setAttribute('style','height:px;width:8px');
-    }
+  let box = document.querySelector(".box");
+  const bigbox = document.createElement("div");
+  bigbox.className = "bigbox";
+  box.appendChild(bigbox);
+  for (let i = 0; i < gridsize * gridsize; i++) {
+    const smallbox = document.createElement("div");
+    smallbox.className = "smallbox";
+    bigbox.appendChild(smallbox);
+    let a = 400 / gridsize - 2;
+    let b = 400 / gridsize - 2;
+    smallbox.setAttribute("style", "height:" + a + "px;width:" + b + "px");
+  }
   window.addEventListener("mouseover", colorChange);
 }
 function colorChange(e) {
@@ -17,18 +19,20 @@ function colorChange(e) {
     e.target.classList.add("color");
   }
 }
-function change(){
+function changebutton() {
   let gridsize = prompt("Please enter grid size within 100:");
-  if (gridsize == null || gridsize == "") {
-    text = "Please enter valid number.";
-    change();
+  if (gridsize == null || gridsize == "" || gridsize>100) {
+    changebutton();
   } else {
-    let box = document.querySelector(".box");
-    let bigbox = document.querySelector(".bigbox");
-    box.removeChild(bigbox);
-    create(gridsize);
+    changegrid(gridsize);
   }
 }
-window.onload = () => {
-  create(40)
+function changegrid(gridsize=40) {
+  let box = document.querySelector(".box");
+  let bigbox = document.querySelector(".bigbox");
+  box.removeChild(bigbox);
+  create(gridsize);
 }
+window.onload = () => {
+  create(40);
+};
